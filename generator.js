@@ -1,39 +1,37 @@
 module.exports = (api, options, rootOptions) => {
     api.extendPackage({
-        dependencies: {
-            "axios": "^0.18.0",
-            "lodash": "^4.17.10",
-            "keymirror": "^0.1.1"
-          },
-          devDependencies: {
-            "mockjs": "^1.0.1-beta3"
-          }
-        // 'scripts': {
-        //     'build:dev': 'vue-cli-service build --mode development',
-        //     'build:prod': 'vue-cli-service build --mode production',
-        //     'test:unit': 'cross-env NODE_ENV=test vue-cli-service test:unit',
-        //     'test:e2e': 'cross-env NODE_ENV=test vue-cli-service test:e2e',
-        //     'lint': 'vue-cli-service lint src/**/*.{js,vue} tests/**/*.js --fix'
-        // },
-        // 'config': {
-        //     'commitizen': {
-        //         'path': 'node_modules/cz-conventional-changelog'
-        //     }
-        // },
-        // 'gitHooks': {
-        //     'pre-commit': 'lint-staged',
-        //     'commit-msg': 'commitlint -e $GIT_PARAMS'
-        // },
-        // 'lint-staged': {
-        //     'src/**/*.{js,jsx,vue}': [
-        //         'vue-cli-service lint --fix',
-        //         'git add'
-        //     ],
-        //     'tests/**/*.js': [
-        //         'vue-cli-service lint --fix',
-        //         'git add'
-        //     ]
-        // }
+        'dependencies': {
+            'core-js': '^3.6.5',
+            'vue': '^3.0.0',
+            'vue-class-component': '^8.0.0-0',
+            'vue-router': '^4.0.0-0',
+            'vuex': '^4.0.0-0'
+        },
+        'devDependencies': {
+            '@typescript-eslint/eslint-plugin': '^4.18.0',
+            '@typescript-eslint/parser': '^4.18.0',
+            '@vue/cli-plugin-babel': '~4.5.15',
+            '@vue/cli-plugin-eslint': '~4.5.15',
+            '@vue/cli-plugin-router': '~4.5.15',
+            '@vue/cli-plugin-typescript': '~4.5.15',
+            '@vue/cli-plugin-vuex': '~4.5.15',
+            '@vue/cli-service': '~4.5.15',
+            '@vue/compiler-sfc': '^3.0.0',
+            '@vue/eslint-config-prettier': '^6.0.0',
+            '@vue/eslint-config-typescript': '^7.0.0',
+            'eslint': '^6.7.2',
+            'eslint-plugin-prettier': '^3.3.1',
+            'eslint-plugin-vue': '^7.0.0',
+            'less': '^3.0.4',
+            'less-loader': '^5.0.0',
+            'prettier': '^2.2.1',
+            'typescript': '~4.1.5'
+        },
+        'scripts': {
+            'serve': 'vue-cli-service serve',
+            'build': 'vue-cli-service build',
+            'lint': 'vue-cli-service lint'
+        }
     })
 
     api.render('./template')
